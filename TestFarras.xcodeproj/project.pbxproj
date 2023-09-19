@@ -55,7 +55,7 @@
 		EDD76C0B2AB944FF007BA34E /* TestFarrasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFarrasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD76C0F2AB944FF007BA34E /* TestFarrasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFarrasUITests.swift; sourceTree = "<group>"; };
 		EDD76C112AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFarrasUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EDD76C5C2AB983A7007BA34E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = HomeVC/HomeVC.swift; sourceTree = "<group>"; };
+		EDD76C5C2AB983A7007BA34E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EDD76C642AB984A3007BA34E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		EDD76C672AB98547007BA34E /* BNIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIStackView.swift; sourceTree = "<group>"; };
 		EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 		EDD76BED2AB944FD007BA34E /* TestFarras */ = {
 			isa = PBXGroup;
 			children = (
+				EDD76C732AB999CE007BA34E /* HomeVC */,
 				EDD76C662AB98534007BA34E /* ReusableViews */,
 				EDD76C632AB98496007BA34E /* Extensions */,
 				EDD76BEE2AB944FD007BA34E /* AppDelegate.swift */,
@@ -120,7 +121,6 @@
 				EDD76BF72AB944FF007BA34E /* Assets.xcassets */,
 				EDD76BF92AB944FF007BA34E /* LaunchScreen.storyboard */,
 				EDD76BFC2AB944FF007BA34E /* Info.plist */,
-				EDD76C5C2AB983A7007BA34E /* HomeVC.swift */,
 			);
 			path = TestFarras;
 			sourceTree = "<group>";
@@ -159,6 +159,14 @@
 				EDD76C6D2AB9932C007BA34E /* BNIImageView.swift */,
 			);
 			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		EDD76C732AB999CE007BA34E /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C5C2AB983A7007BA34E /* HomeVC.swift */,
+			);
+			path = HomeVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
