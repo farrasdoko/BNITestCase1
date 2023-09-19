@@ -26,6 +26,7 @@
 		EDD76C792AB9A3AB007BA34E /* PaymentConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */; };
 		EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */; };
 		EDD76C7D2AB9B8C8007BA34E /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7C2AB9B8C8007BA34E /* Payment.swift */; };
+		EDD76C802AB9D99B007BA34E /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7F2AB9D99B007BA34E /* UIAlertController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationVC.swift; sourceTree = "<group>"; };
 		EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIButton.swift; sourceTree = "<group>"; };
 		EDD76C7C2AB9B8C8007BA34E /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		EDD76C7F2AB9D99B007BA34E /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				EDD76C642AB984A3007BA34E /* UIColor+Extensions.swift */,
 				EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */,
+				EDD76C7F2AB9D99B007BA34E /* UIAlertController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				EDD76C5D2AB983A7007BA34E /* HomeVC.swift in Sources */,
 				EDD76C6A2AB98ABD007BA34E /* UIView+Extensions.swift in Sources */,
 				EDD76C6E2AB9932C007BA34E /* BNIImageView.swift in Sources */,
+				EDD76C802AB9D99B007BA34E /* UIAlertController+Extensions.swift in Sources */,
 				EDD76C6C2AB98D30007BA34E /* BNILabel.swift in Sources */,
 				EDD76C652AB984A3007BA34E /* UIColor+Extensions.swift in Sources */,
 				EDD76BEF2AB944FD007BA34E /* AppDelegate.swift in Sources */,

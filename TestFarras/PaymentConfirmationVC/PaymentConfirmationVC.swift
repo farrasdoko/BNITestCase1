@@ -62,7 +62,7 @@ class PaymentConfirmationVC: UIViewController {
             data.nominal = newValue
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -107,7 +107,16 @@ class PaymentConfirmationVC: UIViewController {
         confirmButton.backgroundColor = .primaryColor
         confirmButton.setTitleColor(.white, for: .normal)
         confirmButton.layer.cornerRadius = 5
+        confirmButton.addTarget(self, action: #selector(confirmButtonClicked), for: .touchUpInside)
         return confirmButton
+    }
+    
+    @objc private func confirmButtonClicked() {
+        confirmButton.isEnabled = false
+        // TODO: Do the payment here.
+        dismiss(animated: true) { [weak self] in
+            UIAlertController.showAlert(title: "Success", message: "Payment completed.", style: .alert)
+        }
     }
     
     private func setupLabel() -> BNILabel {
