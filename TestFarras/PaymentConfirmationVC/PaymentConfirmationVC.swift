@@ -7,13 +7,6 @@
 
 import UIKit
 
-struct Payment {
-    var transactionId: String
-    var recipient: String
-    var merchant: String
-    var nominal: String
-}
-
 class PaymentConfirmationVC: UIViewController {
     
     private var transactionIdLabel: BNILabel!

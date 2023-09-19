@@ -25,6 +25,7 @@
 		EDD76C762AB99A0C007BA34E /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C752AB99A0C007BA34E /* QRCodeScannerViewController.swift */; };
 		EDD76C792AB9A3AB007BA34E /* PaymentConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */; };
 		EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */; };
+		EDD76C7D2AB9B8C8007BA34E /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7C2AB9B8C8007BA34E /* Payment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EDD76C752AB99A0C007BA34E /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 		EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationVC.swift; sourceTree = "<group>"; };
 		EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIButton.swift; sourceTree = "<group>"; };
+		EDD76C7C2AB9B8C8007BA34E /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */,
+				EDD76C7C2AB9B8C8007BA34E /* Payment.swift */,
 			);
 			path = PaymentConfirmationVC;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				EDD76C652AB984A3007BA34E /* UIColor+Extensions.swift in Sources */,
 				EDD76BEF2AB944FD007BA34E /* AppDelegate.swift in Sources */,
 				EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */,
+				EDD76C7D2AB9B8C8007BA34E /* Payment.swift in Sources */,
 				EDD76C762AB99A0C007BA34E /* QRCodeScannerViewController.swift in Sources */,
 				EDD76BF12AB944FD007BA34E /* SceneDelegate.swift in Sources */,
 				EDD76C792AB9A3AB007BA34E /* PaymentConfirmationVC.swift in Sources */,
