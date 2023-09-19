@@ -22,6 +22,9 @@
 		EDD76C6A2AB98ABD007BA34E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */; };
 		EDD76C6C2AB98D30007BA34E /* BNILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C6B2AB98D30007BA34E /* BNILabel.swift */; };
 		EDD76C6E2AB9932C007BA34E /* BNIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C6D2AB9932C007BA34E /* BNIImageView.swift */; };
+		EDD76C762AB99A0C007BA34E /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C752AB99A0C007BA34E /* QRCodeScannerViewController.swift */; };
+		EDD76C792AB9A3AB007BA34E /* PaymentConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */; };
+		EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		EDD76C6B2AB98D30007BA34E /* BNILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNILabel.swift; sourceTree = "<group>"; };
 		EDD76C6D2AB9932C007BA34E /* BNIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIImageView.swift; sourceTree = "<group>"; };
+		EDD76C752AB99A0C007BA34E /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationVC.swift; sourceTree = "<group>"; };
+		EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,8 @@
 		EDD76BED2AB944FD007BA34E /* TestFarras */ = {
 			isa = PBXGroup;
 			children = (
+				EDD76C772AB9A38F007BA34E /* PaymentConfirmationVC */,
+				EDD76C742AB999F6007BA34E /* QR */,
 				EDD76C732AB999CE007BA34E /* HomeVC */,
 				EDD76C662AB98534007BA34E /* ReusableViews */,
 				EDD76C632AB98496007BA34E /* Extensions */,
@@ -157,6 +165,7 @@
 				EDD76C672AB98547007BA34E /* BNIStackView.swift */,
 				EDD76C6B2AB98D30007BA34E /* BNILabel.swift */,
 				EDD76C6D2AB9932C007BA34E /* BNIImageView.swift */,
+				EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -167,6 +176,22 @@
 				EDD76C5C2AB983A7007BA34E /* HomeVC.swift */,
 			);
 			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		EDD76C742AB999F6007BA34E /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C752AB99A0C007BA34E /* QRCodeScannerViewController.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		EDD76C772AB9A38F007BA34E /* PaymentConfirmationVC */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */,
+			);
+			path = PaymentConfirmationVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +332,10 @@
 				EDD76C6C2AB98D30007BA34E /* BNILabel.swift in Sources */,
 				EDD76C652AB984A3007BA34E /* UIColor+Extensions.swift in Sources */,
 				EDD76BEF2AB944FD007BA34E /* AppDelegate.swift in Sources */,
+				EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */,
+				EDD76C762AB99A0C007BA34E /* QRCodeScannerViewController.swift in Sources */,
 				EDD76BF12AB944FD007BA34E /* SceneDelegate.swift in Sources */,
+				EDD76C792AB9A3AB007BA34E /* PaymentConfirmationVC.swift in Sources */,
 				EDD76C682AB98547007BA34E /* BNIStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8NCFZ4PR92;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestFarras/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -512,6 +541,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8NCFZ4PR92;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestFarras/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
