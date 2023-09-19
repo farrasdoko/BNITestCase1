@@ -16,6 +16,12 @@
 		EDD76C062AB944FF007BA34E /* TestFarrasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C052AB944FF007BA34E /* TestFarrasTests.swift */; };
 		EDD76C102AB944FF007BA34E /* TestFarrasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C0F2AB944FF007BA34E /* TestFarrasUITests.swift */; };
 		EDD76C122AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C112AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift */; };
+		EDD76C5D2AB983A7007BA34E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C5C2AB983A7007BA34E /* HomeVC.swift */; };
+		EDD76C652AB984A3007BA34E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C642AB984A3007BA34E /* UIColor+Extensions.swift */; };
+		EDD76C682AB98547007BA34E /* BNIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C672AB98547007BA34E /* BNIStackView.swift */; };
+		EDD76C6A2AB98ABD007BA34E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */; };
+		EDD76C6C2AB98D30007BA34E /* BNILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C6B2AB98D30007BA34E /* BNILabel.swift */; };
+		EDD76C6E2AB9932C007BA34E /* BNIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C6D2AB9932C007BA34E /* BNIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		EDD76C0B2AB944FF007BA34E /* TestFarrasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFarrasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD76C0F2AB944FF007BA34E /* TestFarrasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFarrasUITests.swift; sourceTree = "<group>"; };
 		EDD76C112AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFarrasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDD76C5C2AB983A7007BA34E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = HomeVC/HomeVC.swift; sourceTree = "<group>"; };
+		EDD76C642AB984A3007BA34E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		EDD76C672AB98547007BA34E /* BNIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIStackView.swift; sourceTree = "<group>"; };
+		EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		EDD76C6B2AB98D30007BA34E /* BNILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNILabel.swift; sourceTree = "<group>"; };
+		EDD76C6D2AB9932C007BA34E /* BNIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,8 @@
 		EDD76BED2AB944FD007BA34E /* TestFarras */ = {
 			isa = PBXGroup;
 			children = (
+				EDD76C662AB98534007BA34E /* ReusableViews */,
+				EDD76C632AB98496007BA34E /* Extensions */,
 				EDD76BEE2AB944FD007BA34E /* AppDelegate.swift */,
 				EDD76BF02AB944FD007BA34E /* SceneDelegate.swift */,
 				EDD76BF22AB944FD007BA34E /* ViewController.swift */,
@@ -106,6 +120,7 @@
 				EDD76BF72AB944FF007BA34E /* Assets.xcassets */,
 				EDD76BF92AB944FF007BA34E /* LaunchScreen.storyboard */,
 				EDD76BFC2AB944FF007BA34E /* Info.plist */,
+				EDD76C5C2AB983A7007BA34E /* HomeVC.swift */,
 			);
 			path = TestFarras;
 			sourceTree = "<group>";
@@ -125,6 +140,25 @@
 				EDD76C112AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift */,
 			);
 			path = TestFarrasUITests;
+			sourceTree = "<group>";
+		};
+		EDD76C632AB98496007BA34E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C642AB984A3007BA34E /* UIColor+Extensions.swift */,
+				EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EDD76C662AB98534007BA34E /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C672AB98547007BA34E /* BNIStackView.swift */,
+				EDD76C6B2AB98D30007BA34E /* BNILabel.swift */,
+				EDD76C6D2AB9932C007BA34E /* BNIImageView.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD76BF32AB944FD007BA34E /* ViewController.swift in Sources */,
+				EDD76C5D2AB983A7007BA34E /* HomeVC.swift in Sources */,
+				EDD76C6A2AB98ABD007BA34E /* UIView+Extensions.swift in Sources */,
+				EDD76C6E2AB9932C007BA34E /* BNIImageView.swift in Sources */,
+				EDD76C6C2AB98D30007BA34E /* BNILabel.swift in Sources */,
+				EDD76C652AB984A3007BA34E /* UIColor+Extensions.swift in Sources */,
 				EDD76BEF2AB944FD007BA34E /* AppDelegate.swift in Sources */,
 				EDD76BF12AB944FD007BA34E /* SceneDelegate.swift in Sources */,
+				EDD76C682AB98547007BA34E /* BNIStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
