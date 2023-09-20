@@ -24,8 +24,7 @@ class HomeVC: UIViewController {
     }
     
     private func setupData() {
-        // TODO: Initialize balance from user default
-        headerView.balanceValueLabel.text = "5.00g"
+        headerView.balanceValueLabel.text = UserDefaultManager.shared.balance?.asIdr
     }
     
     private func setupView() {
