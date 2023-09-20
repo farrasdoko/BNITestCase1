@@ -26,11 +26,11 @@ class HomeVC: UIViewController {
     }
     
     @objc private func refreshBalance() {
-        headerView.balanceValueLabel.text = UserDefaultManager.shared.balance?.asIdr
+        headerView.balanceValueLabel.text = RealmHelper.getMainUserBalance()?.asIdr
     }
     
     private func setupData() {
-        headerView.balanceValueLabel.text = UserDefaultManager.shared.balance?.asIdr
+        headerView.balanceValueLabel.text = RealmHelper.getMainUserBalance()?.asIdr
     }
     
     private func setupView() {

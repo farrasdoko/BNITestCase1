@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        // Add Initial Balance
-        if UserDefaultManager.shared.balance == nil {
-            UserDefaultManager.shared.balance = 200000
+        // Add Main User If None
+        if RealmHelper.getMainUser() == nil {
+            RealmHelper.createUser(with: "Farras")
         }
         
         return true

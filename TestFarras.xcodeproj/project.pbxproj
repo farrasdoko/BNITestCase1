@@ -33,6 +33,8 @@
 		EDD76C832AB9DC26007BA34E /* BNIUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C822AB9DC26007BA34E /* BNIUserDefaultManager.swift */; };
 		EDD76C852ABAA56C007BA34E /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C842ABAA56C007BA34E /* Int+Extensions.swift */; };
 		EDD76C892ABAA8E2007BA34E /* Notification.Name+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C882ABAA8E2007BA34E /* Notification.Name+Extensions.swift */; };
+		EDD76C8C2ABAC21A007BA34E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C8B2ABAC21A007BA34E /* User.swift */; };
+		EDD76C8E2ABAC303007BA34E /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C8D2ABAC303007BA34E /* RealmHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		EDD76C822AB9DC26007BA34E /* BNIUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIUserDefaultManager.swift; sourceTree = "<group>"; };
 		EDD76C842ABAA56C007BA34E /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		EDD76C882ABAA8E2007BA34E /* Notification.Name+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extensions.swift"; sourceTree = "<group>"; };
+		EDD76C8B2ABAC21A007BA34E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EDD76C8D2ABAC303007BA34E /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		F04DE7F11CA92EEE72EDD62C /* Pods_TestFarrasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFarrasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA543685F4274B7559229B4C /* Pods_TestFarras.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFarras.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,7 +143,6 @@
 				29D379F456E41C5ADEE6BF43 /* Pods-TestFarrasTests.debug.xcconfig */,
 				75F0946BB5D6E32C51817C54 /* Pods-TestFarrasTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -168,6 +171,7 @@
 		EDD76BED2AB944FD007BA34E /* TestFarras */ = {
 			isa = PBXGroup;
 			children = (
+				EDD76C8A2ABAC210007BA34E /* Realm */,
 				EDD76C812AB9DC0F007BA34E /* Helpers */,
 				EDD76C772AB9A38F007BA34E /* PaymentConfirmationVC */,
 				EDD76C742AB999F6007BA34E /* QR */,
@@ -256,6 +260,15 @@
 				EDD76C822AB9DC26007BA34E /* BNIUserDefaultManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EDD76C8A2ABAC210007BA34E /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C8B2ABAC21A007BA34E /* User.swift */,
+				EDD76C8D2ABAC303007BA34E /* RealmHelper.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,8 +520,10 @@
 				EDD76C6C2AB98D30007BA34E /* BNILabel.swift in Sources */,
 				EDD76C652AB984A3007BA34E /* UIColor+Extensions.swift in Sources */,
 				EDD76C832AB9DC26007BA34E /* BNIUserDefaultManager.swift in Sources */,
+				EDD76C8C2ABAC21A007BA34E /* User.swift in Sources */,
 				EDD76BEF2AB944FD007BA34E /* AppDelegate.swift in Sources */,
 				EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */,
+				EDD76C8E2ABAC303007BA34E /* RealmHelper.swift in Sources */,
 				EDD76C7D2AB9B8C8007BA34E /* Payment.swift in Sources */,
 				EDD76C762AB99A0C007BA34E /* QRCodeScannerViewController.swift in Sources */,
 				EDD76BF12AB944FD007BA34E /* SceneDelegate.swift in Sources */,
