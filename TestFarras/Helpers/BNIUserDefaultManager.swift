@@ -7,6 +7,8 @@
 
 import Foundation
 
+// TODO: Delete this.
+/*
 struct UserDefaultManager {
     private static var BALANCE_KEY = "wallet"
     static var shared = UserDefaultManager()
@@ -26,3 +28,4 @@ struct UserDefaultManager {
         }
     }
 }
+*/

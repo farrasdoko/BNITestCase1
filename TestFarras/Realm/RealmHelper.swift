@@ -11,11 +11,11 @@ struct RealmHelper {
     
     /// Create new user
     static func createUser(with name: String) {
-        let todo = User(name: name)
+        let user = User(name: name)
         
         let realm = try! Realm()
         try! realm.write {
-            realm.add(todo)
+            realm.add(user)
         }
     }
     
