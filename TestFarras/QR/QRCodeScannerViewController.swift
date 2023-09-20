@@ -20,7 +20,9 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        captureSession.startRunning()
+        DispatchQueue.global().async { [weak self] in
+            self?.captureSession.startRunning()
+        }
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
