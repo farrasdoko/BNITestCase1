@@ -17,9 +17,21 @@ class HomeVC: UIViewController {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupData()
+    }
+    
+    private func setupData() {
+        // TODO: Initialize balance from user default
+        headerView.balanceValueLabel.text = "5.00g"
+    }
+    
     private func setupView() {
         view.backgroundColor = .white
         headerView = setupHeaderView()
+        setupQrImageTapped()
     }
     
     private func setupHeaderView() -> HeaderView {
@@ -30,6 +42,15 @@ class HomeVC: UIViewController {
         headerView.insertConstraint(.leading(margin: headerViewMargin), .top(margin: headerViewMargin), .trailing(margin: headerViewMargin), .heightConstant(height: 128))
         
         return headerView
+    }
+    
+    private func setupQrImageTapped() {
+        headerView.didTapQrImage = { [weak self] in
+            let vc = QRCodeScannerViewController()
+            let nav = UINavigationController(rootViewController: vc)
+            
+            self?.present(nav, animated: true)
+        }
     }
     
     private class HeaderView: UIView {
@@ -44,9 +65,11 @@ class HomeVC: UIViewController {
         }
         
         private var balanceTitleLabel: BNILabel!
-        private var balanceValueLabel: BNILabel!
+        var balanceValueLabel: BNILabel!
         private var headerStackView: BNIStackView!
         private var headerImageView: BNIImageView!
+        
+        var didTapQrImage: (() -> Void)?
         
         override init(frame: CGRect) {
             super.init(frame: frame)
@@ -70,19 +93,28 @@ class HomeVC: UIViewController {
         }
         
         private func setupHeaderImageView() -> BNIImageView {
-            let moneyDollarImg = UIImage(named: "money_dollar_circle_fill")
+            let moneyDollarImg = UIImage(systemName: "qrcode.viewfinder")
             let imgView = BNIImageView()
+            imgView.tintColor = .yellow
             imgView.image = moneyDollarImg
             addSubview(imgView)
             
             let imgViewMargin: CGFloat = 8
-            imgView.insertConstraint(.trailing(margin: imgViewMargin), .centerY(margin: 0))
+            imgView.insertConstraint(.trailing(margin: imgViewMargin), .centerY(margin: 0), .widthConstant(width: 40), .heightConstant(height: 40))
             
             NSLayoutConstraint.activate([
                 imgView.leadingAnchor.constraint(greaterThanOrEqualTo: headerStackView.trailingAnchor, constant: imgViewMargin),
             ])
             
+            let imgViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(qrImageTapped))
+            imgView.addGestureRecognizer(imgViewTapGesture)
+            imgView.isUserInteractionEnabled = true
+            
             return imgView
+        }
+        
+        @objc private func qrImageTapped() {
+            didTapQrImage?()
         }
         
         private func setupHeaderStackView() -> BNIStackView {
@@ -104,7 +136,6 @@ class HomeVC: UIViewController {
         
         private func setupBalanceValueLabel() -> BNILabel {
             let balanceLabel = BNILabel()
-            balanceLabel.text = "5.00g"
             balanceLabel.textColor = .white
             balanceLabel.font = .boldSystemFont(ofSize: 24)
             return balanceLabel
