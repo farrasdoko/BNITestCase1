@@ -27,6 +27,9 @@
 		EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */; };
 		EDD76C7D2AB9B8C8007BA34E /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7C2AB9B8C8007BA34E /* Payment.swift */; };
 		EDD76C802AB9D99B007BA34E /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7F2AB9D99B007BA34E /* UIAlertController+Extensions.swift */; };
+		EDD76C832AB9DC26007BA34E /* BNIUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C822AB9DC26007BA34E /* BNIUserDefaultManager.swift */; };
+		EDD76C852ABAA56C007BA34E /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C842ABAA56C007BA34E /* Int+Extensions.swift */; };
+		EDD76C892ABAA8E2007BA34E /* Notification.Name+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C882ABAA8E2007BA34E /* Notification.Name+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIButton.swift; sourceTree = "<group>"; };
 		EDD76C7C2AB9B8C8007BA34E /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		EDD76C7F2AB9D99B007BA34E /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		EDD76C822AB9DC26007BA34E /* BNIUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIUserDefaultManager.swift; sourceTree = "<group>"; };
+		EDD76C842ABAA56C007BA34E /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		EDD76C882ABAA8E2007BA34E /* Notification.Name+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		EDD76BED2AB944FD007BA34E /* TestFarras */ = {
 			isa = PBXGroup;
 			children = (
+				EDD76C812AB9DC0F007BA34E /* Helpers */,
 				EDD76C772AB9A38F007BA34E /* PaymentConfirmationVC */,
 				EDD76C742AB999F6007BA34E /* QR */,
 				EDD76C732AB999CE007BA34E /* HomeVC */,
@@ -160,6 +167,8 @@
 				EDD76C642AB984A3007BA34E /* UIColor+Extensions.swift */,
 				EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */,
 				EDD76C7F2AB9D99B007BA34E /* UIAlertController+Extensions.swift */,
+				EDD76C842ABAA56C007BA34E /* Int+Extensions.swift */,
+				EDD76C882ABAA8E2007BA34E /* Notification.Name+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +207,14 @@
 				EDD76C7C2AB9B8C8007BA34E /* Payment.swift */,
 			);
 			path = PaymentConfirmationVC;
+			sourceTree = "<group>";
+		};
+		EDD76C812AB9DC0F007BA34E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C822AB9DC26007BA34E /* BNIUserDefaultManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,8 +353,11 @@
 				EDD76C6A2AB98ABD007BA34E /* UIView+Extensions.swift in Sources */,
 				EDD76C6E2AB9932C007BA34E /* BNIImageView.swift in Sources */,
 				EDD76C802AB9D99B007BA34E /* UIAlertController+Extensions.swift in Sources */,
+				EDD76C892ABAA8E2007BA34E /* Notification.Name+Extensions.swift in Sources */,
+				EDD76C852ABAA56C007BA34E /* Int+Extensions.swift in Sources */,
 				EDD76C6C2AB98D30007BA34E /* BNILabel.swift in Sources */,
 				EDD76C652AB984A3007BA34E /* UIColor+Extensions.swift in Sources */,
+				EDD76C832AB9DC26007BA34E /* BNIUserDefaultManager.swift in Sources */,
 				EDD76BEF2AB944FD007BA34E /* AppDelegate.swift in Sources */,
 				EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */,
 				EDD76C7D2AB9B8C8007BA34E /* Payment.swift in Sources */,

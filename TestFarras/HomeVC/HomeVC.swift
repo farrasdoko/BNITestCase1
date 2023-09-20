@@ -15,12 +15,18 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
 
         setupView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshBalance), name: NSNotification.Name.BalanceDidChange, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         setupData()
+    }
+    
+    @objc private func refreshBalance() {
+        headerView.balanceValueLabel.text = UserDefaultManager.shared.balance?.asIdr
     }
     
     private func setupData() {

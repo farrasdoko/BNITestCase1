@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        // Add Initial Balance
+        if UserDefaultManager.shared.balance == nil {
+            UserDefaultManager.shared.balance = 200000
+        }
+        
+        return true
+    }
 
     // MARK: UISceneSession Lifecycle
 

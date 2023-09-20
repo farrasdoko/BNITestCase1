@@ -11,5 +11,5 @@ struct Payment {
     var transactionId: String
     var recipient: String
     var merchant: String
-    var nominal: String
+    var nominal: Int
 }

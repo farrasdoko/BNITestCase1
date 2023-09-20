@@ -101,7 +101,7 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
             transactionId: components[1],
             recipient: components[0],
             merchant: components[2],
-            nominal: components[3])
+            nominal: Int(components[3]) ?? 0)
         return payment
     }
 }

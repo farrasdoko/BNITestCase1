@@ -53,12 +53,12 @@ class PaymentConfirmationVC: UIViewController {
             data.merchant = newValue
         }
     }
-    private var nominal: String {
+    private var nominal: Int {
         get {
             data.nominal
         }
         set {
-            nominalLabel.text = "Nominal: "+(newValue )
+            nominalLabel.text = "Nominal: \(newValue)"
             data.nominal = newValue
         }
     }
@@ -112,8 +112,11 @@ class PaymentConfirmationVC: UIViewController {
     }
     
     @objc private func confirmButtonClicked() {
+        // Prevent user from double click.
         confirmButton.isEnabled = false
-        // TODO: Do the payment here.
+        
+        UserDefaultManager.shared.balance = (UserDefaultManager.shared.balance ?? 0) - data.nominal
+        
         dismiss(animated: true) { [weak self] in
             UIAlertController.showAlert(title: "Success", message: "Payment completed.", style: .alert)
         }
