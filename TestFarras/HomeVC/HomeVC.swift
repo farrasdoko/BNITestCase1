@@ -23,6 +23,8 @@ class HomeVC: UIViewController {
         super.viewDidAppear(animated)
         
         setupData()
+        
+        print("transaction history is \(RealmHelper.getTransactionHistory())")
     }
     
     @objc private func refreshBalance() {

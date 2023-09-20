@@ -90,8 +90,6 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
             guard let payment = getPayment(from: stringValue) else { return }
             let vc = PaymentConfirmationVC(paymentData: payment)
             navigationController?.setViewControllers([vc], animated: true)
-            // Handle the scanned QR code data (stringValue)
-            print("string value is", stringValue)
         }
     }
     

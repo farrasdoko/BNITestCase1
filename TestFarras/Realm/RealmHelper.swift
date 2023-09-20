@@ -32,15 +32,24 @@ struct RealmHelper {
 
     /// Update user balance.
     /// (-) to decrease and (+) to increase.
-    static func performTransactionOnMainUser(nominal: Int) {
+    static func performTransactionOnMainUser(recipient: String, merchant: String, nominal: Int) {
         let realm = try! Realm()
         let mainUser = realm.objects(User.self).first
+        
+        let transaction = Transaction(recipient: recipient, merchant: merchant, nominal: nominal)
         try! realm.write {
             mainUser?.balance = (mainUser?.balance ?? 0) + nominal
+            realm.add(transaction)
         }
         
         // Notify that balance has new value.
         NotificationCenter.default.post(name: NSNotification.Name.BalanceDidChange, object: nil)
+    }
+    
+    /// Get All Transactions
+    static func getTransactionHistory() -> [Transaction] {
+        let realm = try! Realm()
+        return Array(realm.objects(Transaction.self))
     }
     
     static func getMainUserBalance() -> Int? {

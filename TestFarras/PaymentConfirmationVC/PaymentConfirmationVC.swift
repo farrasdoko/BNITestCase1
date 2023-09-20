@@ -115,7 +115,7 @@ class PaymentConfirmationVC: UIViewController {
         // Prevent user from double click.
         confirmButton.isEnabled = false
         
-        RealmHelper.performTransactionOnMainUser(nominal: data.nominal * -1)
+        RealmHelper.performTransactionOnMainUser(recipient: data.recipient, merchant: data.merchant, nominal: data.nominal * -1)
         
         dismiss(animated: true) {
             UIAlertController.showAlert(title: "Success", message: "Payment completed.", style: .alert)
