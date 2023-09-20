@@ -10,10 +10,14 @@ import UIKit
 class HomeVC: UIViewController {
     
     private var headerView: HeaderView!
+    private let tableView = UITableView()
+    private let transactionCellIdentifier = "TransactionCell"
+    
+    private var transactionsData: [Transaction] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupView()
         
         NotificationCenter.default.addObserver(self, selector: #selector(refreshBalance), name: NSNotification.Name.BalanceDidChange, object: nil)
@@ -23,22 +27,42 @@ class HomeVC: UIViewController {
         super.viewDidAppear(animated)
         
         setupData()
-        
-        print("transaction history is \(RealmHelper.getTransactionHistory())")
     }
     
     @objc private func refreshBalance() {
         headerView.balanceValueLabel.text = RealmHelper.getMainUserBalance()?.asIdr
+        transactionsData = RealmHelper.getTransactionHistory()
+        tableView.reloadData()
     }
     
     private func setupData() {
         headerView.balanceValueLabel.text = RealmHelper.getMainUserBalance()?.asIdr
+        transactionsData = RealmHelper.getTransactionHistory()
+        tableView.reloadData()
     }
     
     private func setupView() {
         view.backgroundColor = .white
         headerView = setupHeaderView()
         setupQrImageTapped()
+        
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: transactionCellIdentifier)
+        
+        view.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        let margin: CGFloat = 8
+        tableView.insertConstraint(.top(margin: margin), .leading(margin: margin), .trailing(margin: margin))
+        NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: margin)
+        ])
     }
     
     private func setupHeaderView() -> HeaderView {
@@ -46,7 +70,7 @@ class HomeVC: UIViewController {
         view.addSubview(headerView)
         
         let headerViewMargin: CGFloat = 8
-        headerView.insertConstraint(.leading(margin: headerViewMargin), .top(margin: headerViewMargin), .trailing(margin: headerViewMargin), .heightConstant(height: 128))
+        headerView.insertConstraint(.leading(margin: headerViewMargin), .bottom(margin: headerViewMargin), .trailing(margin: headerViewMargin), .heightConstant(height: 128))
         
         return headerView
     }
@@ -147,5 +171,22 @@ class HomeVC: UIViewController {
             balanceLabel.font = .boldSystemFont(ofSize: 24)
             return balanceLabel
         }
+    }
+}
+
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        transactionsData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: transactionCellIdentifier)!
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = transactionsData[indexPath.row].merchant
+        content.secondaryText = transactionsData[indexPath.row].nominal.asIdr
+        
+        cell.contentConfiguration = content
+        return cell
     }
 }
