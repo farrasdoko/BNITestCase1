@@ -8,7 +8,7 @@
 import UIKit
 
 extension Int {
-    // returns `Rp `
+    // Returns `Rp1.800.000`
     var asIdr: String? {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
