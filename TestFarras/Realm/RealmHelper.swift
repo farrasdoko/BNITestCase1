@@ -38,6 +38,9 @@ struct RealmHelper {
         try! realm.write {
             mainUser?.balance = (mainUser?.balance ?? 0) + nominal
         }
+        
+        // Notify that balance has new value.
+        NotificationCenter.default.post(name: NSNotification.Name.BalanceDidChange, object: nil)
     }
     
     static func getMainUserBalance() -> Int? {

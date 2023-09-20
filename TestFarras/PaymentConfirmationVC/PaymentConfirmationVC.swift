@@ -58,7 +58,7 @@ class PaymentConfirmationVC: UIViewController {
             data.nominal
         }
         set {
-            nominalLabel.text = "Nominal: \(newValue)"
+            nominalLabel.text = "Nominal: "+(newValue.asIdr ?? "")
             data.nominal = newValue
         }
     }
@@ -115,9 +115,9 @@ class PaymentConfirmationVC: UIViewController {
         // Prevent user from double click.
         confirmButton.isEnabled = false
         
-        UserDefaultManager.shared.balance = (UserDefaultManager.shared.balance ?? 0) - data.nominal
+        RealmHelper.performTransactionOnMainUser(nominal: data.nominal * -1)
         
-        dismiss(animated: true) { [weak self] in
+        dismiss(animated: true) {
             UIAlertController.showAlert(title: "Success", message: "Payment completed.", style: .alert)
         }
     }
