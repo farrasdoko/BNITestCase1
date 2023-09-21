@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43D1A4CB7F607437337CB75C /* Pods_TestFarras_TestFarrasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DF73D4CB616689F47D2A50 /* Pods_TestFarras_TestFarrasUITests.framework */; };
 		66BBC157FE758708325E25AF /* Pods_TestFarras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA543685F4274B7559229B4C /* Pods_TestFarras.framework */; };
 		C3323BE94D22AE768431ABB2 /* Pods_TestFarrasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04DE7F11CA92EEE72EDD62C /* Pods_TestFarrasTests.framework */; };
 		EDD76BEF2AB944FD007BA34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76BEE2AB944FD007BA34E /* AppDelegate.swift */; };
@@ -17,8 +16,6 @@
 		EDD76BF82AB944FF007BA34E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD76BF72AB944FF007BA34E /* Assets.xcassets */; };
 		EDD76BFB2AB944FF007BA34E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD76BF92AB944FF007BA34E /* LaunchScreen.storyboard */; };
 		EDD76C062AB944FF007BA34E /* TestFarrasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C052AB944FF007BA34E /* TestFarrasTests.swift */; };
-		EDD76C102AB944FF007BA34E /* TestFarrasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C0F2AB944FF007BA34E /* TestFarrasUITests.swift */; };
-		EDD76C122AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C112AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift */; };
 		EDD76C5D2AB983A7007BA34E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C5C2AB983A7007BA34E /* HomeVC.swift */; };
 		EDD76C652AB984A3007BA34E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C642AB984A3007BA34E /* UIColor+Extensions.swift */; };
 		EDD76C682AB98547007BA34E /* BNIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C672AB98547007BA34E /* BNIStackView.swift */; };
@@ -55,13 +52,6 @@
 			remoteGlobalIDString = EDD76BEA2AB944FD007BA34E;
 			remoteInfo = TestFarras;
 		};
-		EDD76C0C2AB944FF007BA34E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDD76BE32AB944FD007BA34E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EDD76BEA2AB944FD007BA34E;
-			remoteInfo = TestFarras;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -82,9 +72,6 @@
 		EDD76BFC2AB944FF007BA34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDD76C012AB944FF007BA34E /* TestFarrasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFarrasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD76C052AB944FF007BA34E /* TestFarrasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFarrasTests.swift; sourceTree = "<group>"; };
-		EDD76C0B2AB944FF007BA34E /* TestFarrasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFarrasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDD76C0F2AB944FF007BA34E /* TestFarrasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFarrasUITests.swift; sourceTree = "<group>"; };
-		EDD76C112AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFarrasUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EDD76C5C2AB983A7007BA34E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EDD76C642AB984A3007BA34E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		EDD76C672AB98547007BA34E /* BNIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIStackView.swift; sourceTree = "<group>"; };
@@ -132,14 +119,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDD76C082AB944FF007BA34E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43D1A4CB7F607437337CB75C /* Pods_TestFarras_TestFarrasUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -171,7 +150,6 @@
 			children = (
 				EDD76BED2AB944FD007BA34E /* TestFarras */,
 				EDD76C042AB944FF007BA34E /* TestFarrasTests */,
-				EDD76C0E2AB944FF007BA34E /* TestFarrasUITests */,
 				EDD76BEC2AB944FD007BA34E /* Products */,
 				0E7D98EC690ACBDEA63F6656 /* Pods */,
 				09C12F4354D25018D5B09EA9 /* Frameworks */,
@@ -183,7 +161,6 @@
 			children = (
 				EDD76BEB2AB944FD007BA34E /* TestFarras.app */,
 				EDD76C012AB944FF007BA34E /* TestFarrasTests.xctest */,
-				EDD76C0B2AB944FF007BA34E /* TestFarrasUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,15 +192,6 @@
 				EDD76C052AB944FF007BA34E /* TestFarrasTests.swift */,
 			);
 			path = TestFarrasTests;
-			sourceTree = "<group>";
-		};
-		EDD76C0E2AB944FF007BA34E /* TestFarrasUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EDD76C0F2AB944FF007BA34E /* TestFarrasUITests.swift */,
-				EDD76C112AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift */,
-			);
-			path = TestFarrasUITests;
 			sourceTree = "<group>";
 		};
 		EDD76C632AB98496007BA34E /* Extensions */ = {
@@ -462,26 +430,6 @@
 			productReference = EDD76C012AB944FF007BA34E /* TestFarrasTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EDD76C0A2AB944FF007BA34E /* TestFarrasUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EDD76C1B2AB944FF007BA34E /* Build configuration list for PBXNativeTarget "TestFarrasUITests" */;
-			buildPhases = (
-				02D56B8A310523D543A18E86 /* [CP] Check Pods Manifest.lock */,
-				EDD76C072AB944FF007BA34E /* Sources */,
-				EDD76C082AB944FF007BA34E /* Frameworks */,
-				EDD76C092AB944FF007BA34E /* Resources */,
-				18E1F17F08BB8E73FD9D77EE /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EDD76C0D2AB944FF007BA34E /* PBXTargetDependency */,
-			);
-			name = TestFarrasUITests;
-			productName = TestFarrasUITests;
-			productReference = EDD76C0B2AB944FF007BA34E /* TestFarrasUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -496,10 +444,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					EDD76C002AB944FF007BA34E = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = EDD76BEA2AB944FD007BA34E;
-					};
-					EDD76C0A2AB944FF007BA34E = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = EDD76BEA2AB944FD007BA34E;
 					};
@@ -520,7 +464,6 @@
 			targets = (
 				EDD76BEA2AB944FD007BA34E /* TestFarras */,
 				EDD76C002AB944FF007BA34E /* TestFarrasTests */,
-				EDD76C0A2AB944FF007BA34E /* TestFarrasUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -543,55 +486,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDD76C092AB944FF007BA34E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		02D56B8A310523D543A18E86 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TestFarras-TestFarrasUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		18E1F17F08BB8E73FD9D77EE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestFarras-TestFarrasUITests/Pods-TestFarras-TestFarrasUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestFarras-TestFarrasUITests/Pods-TestFarras-TestFarrasUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFarras-TestFarrasUITests/Pods-TestFarras-TestFarrasUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		54117BEA458A6CED68E074A7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -700,15 +597,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDD76C072AB944FF007BA34E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDD76C102AB944FF007BA34E /* TestFarrasUITests.swift in Sources */,
-				EDD76C122AB944FF007BA34E /* TestFarrasUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -716,11 +604,6 @@
 			isa = PBXTargetDependency;
 			target = EDD76BEA2AB944FD007BA34E /* TestFarras */;
 			targetProxy = EDD76C022AB944FF007BA34E /* PBXContainerItemProxy */;
-		};
-		EDD76C0D2AB944FF007BA34E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EDD76BEA2AB944FD007BA34E /* TestFarras */;
-			targetProxy = EDD76C0C2AB944FF007BA34E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -956,42 +839,6 @@
 			};
 			name = Release;
 		};
-		EDD76C1C2AB944FF007BA34E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D678EEC2E91A3FD7291502F /* Pods-TestFarras-TestFarrasUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.farras.TestFarrasUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestFarras;
-			};
-			name = Debug;
-		};
-		EDD76C1D2AB944FF007BA34E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4048265DCAF0DCC9B58A4A5D /* Pods-TestFarras-TestFarrasUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.farras.TestFarrasUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestFarras;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1018,15 +865,6 @@
 			buildConfigurations = (
 				EDD76C192AB944FF007BA34E /* Debug */,
 				EDD76C1A2AB944FF007BA34E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EDD76C1B2AB944FF007BA34E /* Build configuration list for PBXNativeTarget "TestFarrasUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EDD76C1C2AB944FF007BA34E /* Debug */,
-				EDD76C1D2AB944FF007BA34E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
