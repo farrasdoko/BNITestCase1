@@ -1,5 +1,5 @@
 //
-//  QRCodeScannerViewController.swift
+//  QRCodeScannerVC.swift
 //  TestFarras
 //
 //  Created by Farras on 19/09/23.
@@ -8,25 +8,37 @@
 import AVFoundation
 import UIKit
 
-class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+protocol QRCodeScannerViewProtocol: AnyObject {
+    var presenter: QRCodeScannerPresenterProtocol? { get set }
+    
+    // MARK: Presenter to View
+    func startCaptureSession()
+    func stopCaptureSession()
+}
+
+class QRCodeScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    
+    var presenter: QRCodeScannerPresenterProtocol?
 
     private var captureSession: AVCaptureSession!
     private var previewLayer: AVCaptureVideoPreviewLayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupCaptureSessionForQR()
+        presenter?.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DispatchQueue.global().async { [weak self] in
-            self?.captureSession.startRunning()
-        }
+        
+        presenter?.viewDidAppear()
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        captureSession.stopRunning()
+        
+        presenter?.viewDidDisappear()
     }
     
     private func setupCaptureSessionForQR() {
@@ -86,22 +98,21 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject, let stringValue = metadataObject.stringValue {
             
-            
-            guard let payment = getPayment(from: stringValue) else { return }
-            let vc = PaymentConfirmationVC(paymentData: payment)
-            navigationController?.setViewControllers([vc], animated: true)
+            presenter?.showConfirmPaymentController(navigationController: navigationController, metadataString: stringValue)
+        }
+    }
+}
+
+extension QRCodeScannerVC: QRCodeScannerViewProtocol {
+    func startCaptureSession() {
+        DispatchQueue.global().async { [weak self] in
+            self?.captureSession.startRunning()
         }
     }
     
-    private func getPayment(from strMetaData: String) -> Payment? {
-        let components = strMetaData.components(separatedBy: ".")
-        guard components.count == 4 else {return nil}
-        
-        let payment = Payment(
-            transactionId: components[1],
-            recipient: components[0],
-            merchant: components[2],
-            nominal: Int(components[3]) ?? 0)
-        return payment
+    func stopCaptureSession() {
+        DispatchQueue.global().async { [weak self] in
+            self?.captureSession.stopRunning()
+        }
     }
 }

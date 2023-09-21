@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol HomeViewProtocol: AnyObject {
+    var presenter: HomePresenterProtocol? { get set }
+    
+    // MARK: Presenter to View
+    func refreshBalance(balance: String?, transactionData: [Transaction])
+}
+
+
 class HomeVC: UIViewController {
+    
+    var presenter: HomePresenterProtocol?
     
     private var headerView: HeaderView!
     private let tableView = UITableView()
@@ -19,26 +29,13 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshBalance), name: NSNotification.Name.BalanceDidChange, object: nil)
+        presenter?.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        setupData()
-    }
-    
-    @objc private func refreshBalance() {
-        headerView.balanceValueLabel.text = RealmHelper.getMainUserBalance()?.asIdr
-        transactionsData = RealmHelper.getTransactionHistory()
-        tableView.reloadData()
-    }
-    
-    private func setupData() {
-        headerView.balanceValueLabel.text = RealmHelper.getMainUserBalance()?.asIdr
-        transactionsData = RealmHelper.getTransactionHistory()
-        tableView.reloadData()
+        presenter?.viewDidAppear()
     }
     
     private func setupView() {
@@ -77,10 +74,7 @@ class HomeVC: UIViewController {
     
     private func setupQrImageTapped() {
         headerView.didTapQrImage = { [weak self] in
-            let vc = QRCodeScannerViewController()
-            let nav = UINavigationController(rootViewController: vc)
-            
-            self?.present(nav, animated: true)
+            self?.presenter?.showQRController(from: self)
         }
     }
     
@@ -188,5 +182,13 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.contentConfiguration = content
         return cell
+    }
+}
+
+extension HomeVC: HomeViewProtocol {
+    func refreshBalance(balance: String?, transactionData: [Transaction]) {
+        headerView.balanceValueLabel.text = balance
+        self.transactionsData = transactionData
+        tableView.reloadData()
     }
 }

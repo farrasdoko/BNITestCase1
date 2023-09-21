@@ -25,7 +25,7 @@
 		EDD76C6A2AB98ABD007BA34E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */; };
 		EDD76C6C2AB98D30007BA34E /* BNILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C6B2AB98D30007BA34E /* BNILabel.swift */; };
 		EDD76C6E2AB9932C007BA34E /* BNIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C6D2AB9932C007BA34E /* BNIImageView.swift */; };
-		EDD76C762AB99A0C007BA34E /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C752AB99A0C007BA34E /* QRCodeScannerViewController.swift */; };
+		EDD76C762AB99A0C007BA34E /* QRCodeScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C752AB99A0C007BA34E /* QRCodeScannerVC.swift */; };
 		EDD76C792AB9A3AB007BA34E /* PaymentConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */; };
 		EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */; };
 		EDD76C7D2AB9B8C8007BA34E /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C7C2AB9B8C8007BA34E /* Payment.swift */; };
@@ -36,6 +36,15 @@
 		EDD76C8C2ABAC21A007BA34E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C8B2ABAC21A007BA34E /* User.swift */; };
 		EDD76C8E2ABAC303007BA34E /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C8D2ABAC303007BA34E /* RealmHelper.swift */; };
 		EDD76C902ABACFBA007BA34E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD76C8F2ABACFBA007BA34E /* Transaction.swift */; };
+		EDFCDF942ABCFA2E00C366C2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDF932ABCFA2E00C366C2 /* HomePresenter.swift */; };
+		EDFCDF962ABCFA5900C366C2 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDF952ABCFA5900C366C2 /* HomeInteractor.swift */; };
+		EDFCDF982ABCFA9B00C366C2 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDF972ABCFA9B00C366C2 /* HomeRouter.swift */; };
+		EDFCDF9F2ABD009900C366C2 /* QRCodeScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDF9E2ABD009900C366C2 /* QRCodeScannerPresenter.swift */; };
+		EDFCDFA12ABD00A800C366C2 /* QRCodeScannerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFA02ABD00A800C366C2 /* QRCodeScannerInteractor.swift */; };
+		EDFCDFA32ABD00B100C366C2 /* QRCodeScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFA22ABD00B100C366C2 /* QRCodeScannerRouter.swift */; };
+		EDFCDFAA2ABD085400C366C2 /* PaymentConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFA92ABD085400C366C2 /* PaymentConfirmationPresenter.swift */; };
+		EDFCDFAC2ABD086000C366C2 /* PaymentConfirmationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFAB2ABD086000C366C2 /* PaymentConfirmationInteractor.swift */; };
+		EDFCDFAE2ABD086B00C366C2 /* PaymentConfirmationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCDFAD2ABD086B00C366C2 /* PaymentConfirmationRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +91,7 @@
 		EDD76C692AB98ABD007BA34E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		EDD76C6B2AB98D30007BA34E /* BNILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNILabel.swift; sourceTree = "<group>"; };
 		EDD76C6D2AB9932C007BA34E /* BNIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIImageView.swift; sourceTree = "<group>"; };
-		EDD76C752AB99A0C007BA34E /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		EDD76C752AB99A0C007BA34E /* QRCodeScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerVC.swift; sourceTree = "<group>"; };
 		EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationVC.swift; sourceTree = "<group>"; };
 		EDD76C7A2AB9B5EC007BA34E /* BNIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIButton.swift; sourceTree = "<group>"; };
 		EDD76C7C2AB9B8C8007BA34E /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
@@ -93,6 +102,15 @@
 		EDD76C8B2ABAC21A007BA34E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EDD76C8D2ABAC303007BA34E /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		EDD76C8F2ABACFBA007BA34E /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		EDFCDF932ABCFA2E00C366C2 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		EDFCDF952ABCFA5900C366C2 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		EDFCDF972ABCFA9B00C366C2 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		EDFCDF9E2ABD009900C366C2 /* QRCodeScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerPresenter.swift; sourceTree = "<group>"; };
+		EDFCDFA02ABD00A800C366C2 /* QRCodeScannerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerInteractor.swift; sourceTree = "<group>"; };
+		EDFCDFA22ABD00B100C366C2 /* QRCodeScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerRouter.swift; sourceTree = "<group>"; };
+		EDFCDFA92ABD085400C366C2 /* PaymentConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationPresenter.swift; sourceTree = "<group>"; };
+		EDFCDFAB2ABD086000C366C2 /* PaymentConfirmationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationInteractor.swift; sourceTree = "<group>"; };
+		EDFCDFAD2ABD086B00C366C2 /* PaymentConfirmationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationRouter.swift; sourceTree = "<group>"; };
 		F04DE7F11CA92EEE72EDD62C /* Pods_TestFarrasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFarrasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA543685F4274B7559229B4C /* Pods_TestFarras.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFarras.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,11 +193,11 @@
 			children = (
 				EDD76C8A2ABAC210007BA34E /* Realm */,
 				EDD76C812AB9DC0F007BA34E /* Helpers */,
+				EDD76C662AB98534007BA34E /* ReusableViews */,
+				EDD76C632AB98496007BA34E /* Extensions */,
 				EDD76C772AB9A38F007BA34E /* PaymentConfirmationVC */,
 				EDD76C742AB999F6007BA34E /* QR */,
 				EDD76C732AB999CE007BA34E /* HomeVC */,
-				EDD76C662AB98534007BA34E /* ReusableViews */,
-				EDD76C632AB98496007BA34E /* Extensions */,
 				EDD76BEE2AB944FD007BA34E /* AppDelegate.swift */,
 				EDD76BF02AB944FD007BA34E /* SceneDelegate.swift */,
 				EDD76BF22AB944FD007BA34E /* ViewController.swift */,
@@ -234,7 +252,11 @@
 		EDD76C732AB999CE007BA34E /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				EDD76C5C2AB983A7007BA34E /* HomeVC.swift */,
+				EDFCDF922ABCF9B300C366C2 /* Router */,
+				EDFCDF912ABCF9AC00C366C2 /* Entity */,
+				EDFCDF902ABCF9A500C366C2 /* Presenter */,
+				EDFCDF8F2ABCF99F00C366C2 /* Interactor */,
+				EDFCDF8E2ABCF99900C366C2 /* View */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -242,7 +264,11 @@
 		EDD76C742AB999F6007BA34E /* QR */ = {
 			isa = PBXGroup;
 			children = (
-				EDD76C752AB99A0C007BA34E /* QRCodeScannerViewController.swift */,
+				EDFCDF9D2ABD000700C366C2 /* Router */,
+				EDFCDF9C2ABD000100C366C2 /* Entity */,
+				EDFCDF9B2ABCFFF700C366C2 /* Presenter */,
+				EDFCDF9A2ABCFFF200C366C2 /* Interactor */,
+				EDFCDF992ABCFFE400C366C2 /* View */,
 			);
 			path = QR;
 			sourceTree = "<group>";
@@ -250,8 +276,11 @@
 		EDD76C772AB9A38F007BA34E /* PaymentConfirmationVC */ = {
 			isa = PBXGroup;
 			children = (
-				EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */,
-				EDD76C7C2AB9B8C8007BA34E /* Payment.swift */,
+				EDFCDFA82ABD07CC00C366C2 /* Router */,
+				EDFCDFA72ABD07C700C366C2 /* Entity */,
+				EDFCDFA62ABD07C100C366C2 /* Presenter */,
+				EDFCDFA52ABD07BC00C366C2 /* Interactor */,
+				EDFCDFA42ABD07B700C366C2 /* View */,
 			);
 			path = PaymentConfirmationVC;
 			sourceTree = "<group>";
@@ -272,6 +301,124 @@
 				EDD76C8F2ABACFBA007BA34E /* Transaction.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		EDFCDF8E2ABCF99900C366C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C5C2AB983A7007BA34E /* HomeVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDFCDF8F2ABCF99F00C366C2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDF952ABCFA5900C366C2 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EDFCDF902ABCF9A500C366C2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDF932ABCFA2E00C366C2 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EDFCDF912ABCF9AC00C366C2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EDFCDF922ABCF9B300C366C2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDF972ABCFA9B00C366C2 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EDFCDF992ABCFFE400C366C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C752AB99A0C007BA34E /* QRCodeScannerVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDFCDF9A2ABCFFF200C366C2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFA02ABD00A800C366C2 /* QRCodeScannerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EDFCDF9B2ABCFFF700C366C2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDF9E2ABD009900C366C2 /* QRCodeScannerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EDFCDF9C2ABD000100C366C2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EDFCDF9D2ABD000700C366C2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFA22ABD00B100C366C2 /* QRCodeScannerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EDFCDFA42ABD07B700C366C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C782AB9A3AB007BA34E /* PaymentConfirmationVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDFCDFA52ABD07BC00C366C2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFAB2ABD086000C366C2 /* PaymentConfirmationInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EDFCDFA62ABD07C100C366C2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFA92ABD085400C366C2 /* PaymentConfirmationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EDFCDFA72ABD07C700C366C2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EDD76C7C2AB9B8C8007BA34E /* Payment.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EDFCDFA82ABD07CC00C366C2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCDFAD2ABD086B00C366C2 /* PaymentConfirmationRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,7 +660,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFCDF942ABCFA2E00C366C2 /* HomePresenter.swift in Sources */,
+				EDFCDFA32ABD00B100C366C2 /* QRCodeScannerRouter.swift in Sources */,
+				EDFCDF962ABCFA5900C366C2 /* HomeInteractor.swift in Sources */,
 				EDD76BF32AB944FD007BA34E /* ViewController.swift in Sources */,
+				EDFCDFAC2ABD086000C366C2 /* PaymentConfirmationInteractor.swift in Sources */,
 				EDD76C5D2AB983A7007BA34E /* HomeVC.swift in Sources */,
 				EDD76C6A2AB98ABD007BA34E /* UIView+Extensions.swift in Sources */,
 				EDD76C6E2AB9932C007BA34E /* BNIImageView.swift in Sources */,
@@ -521,18 +672,23 @@
 				EDD76C892ABAA8E2007BA34E /* Notification.Name+Extensions.swift in Sources */,
 				EDD76C852ABAA56C007BA34E /* Int+Extensions.swift in Sources */,
 				EDD76C6C2AB98D30007BA34E /* BNILabel.swift in Sources */,
+				EDFCDFAE2ABD086B00C366C2 /* PaymentConfirmationRouter.swift in Sources */,
 				EDD76C652AB984A3007BA34E /* UIColor+Extensions.swift in Sources */,
+				EDFCDF982ABCFA9B00C366C2 /* HomeRouter.swift in Sources */,
 				EDD76C832AB9DC26007BA34E /* BNIUserDefaultManager.swift in Sources */,
 				EDD76C8C2ABAC21A007BA34E /* User.swift in Sources */,
 				EDD76BEF2AB944FD007BA34E /* AppDelegate.swift in Sources */,
 				EDD76C7B2AB9B5EC007BA34E /* BNIButton.swift in Sources */,
+				EDFCDFAA2ABD085400C366C2 /* PaymentConfirmationPresenter.swift in Sources */,
 				EDD76C8E2ABAC303007BA34E /* RealmHelper.swift in Sources */,
 				EDD76C902ABACFBA007BA34E /* Transaction.swift in Sources */,
 				EDD76C7D2AB9B8C8007BA34E /* Payment.swift in Sources */,
-				EDD76C762AB99A0C007BA34E /* QRCodeScannerViewController.swift in Sources */,
+				EDD76C762AB99A0C007BA34E /* QRCodeScannerVC.swift in Sources */,
 				EDD76BF12AB944FD007BA34E /* SceneDelegate.swift in Sources */,
+				EDFCDFA12ABD00A800C366C2 /* QRCodeScannerInteractor.swift in Sources */,
 				EDD76C792AB9A3AB007BA34E /* PaymentConfirmationVC.swift in Sources */,
 				EDD76C682AB98547007BA34E /* BNIStackView.swift in Sources */,
+				EDFCDF9F2ABD009900C366C2 /* QRCodeScannerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

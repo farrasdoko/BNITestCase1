@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol PaymentConfirmationViewProtocol: AnyObject {
+    var presenter: PaymentConfirmationPresenterProtocol? { get set }
+    
+    // MARK: Presenter to View
+    func setupData(with data: Payment)
+    func showSuccessAlert()
+}
+
 class PaymentConfirmationVC: UIViewController {
+    
+    var presenter: PaymentConfirmationPresenterProtocol?
     
     private var transactionIdLabel: BNILabel!
     private var recipientLabel: BNILabel!
@@ -67,14 +77,7 @@ class PaymentConfirmationVC: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        setupData()
-    }
-    
-    private func setupData() {
-        transactionId = data.transactionId
-        recipient = data.recipient
-        merchant = data.merchant
-        nominal = data.nominal
+        presenter?.viewDidLoad(payment: data)
     }
     
     private func setupView() {
@@ -114,12 +117,7 @@ class PaymentConfirmationVC: UIViewController {
     @objc private func confirmButtonClicked() {
         // Prevent user from double click.
         confirmButton.isEnabled = false
-        
-        RealmHelper.performTransactionOnMainUser(recipient: data.recipient, merchant: data.merchant, nominal: data.nominal * -1)
-        
-        dismiss(animated: true) {
-            UIAlertController.showAlert(title: "Success", message: "Payment completed.", style: .alert)
-        }
+        presenter?.confirmButtonClicked(data: data, vc: self)
     }
     
     private func setupLabel() -> BNILabel {
@@ -128,4 +126,16 @@ class PaymentConfirmationVC: UIViewController {
         return balanceLabel
     }
     
+}
+
+extension PaymentConfirmationVC: PaymentConfirmationViewProtocol {
+    func setupData(with data: Payment) {
+        transactionId = data.transactionId
+        recipient = data.recipient
+        merchant = data.merchant
+        nominal = data.nominal
+    }
+    func showSuccessAlert() {
+        UIAlertController.showAlert(title: "Success", message: "Payment completed.", style: .alert)
+    }
 }
